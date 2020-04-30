@@ -16,6 +16,7 @@ def phase0(Guest, FD_contest, Multi_Op):
 
     Callsign =""
     Ph0 = []
+    temp = ""
 
 
 
@@ -33,8 +34,9 @@ def phase0(Guest, FD_contest, Multi_Op):
         fill = fill.strip()
         fill = fill.split(":")
         if "コールサイン"==fill[0] :
-            Callsign = fill[1]
-            Callsign = Callsign.lstrip().rstrip()
+            temp = fill[1].split('/')
+#            Callsign = Callsign.lstrip().rstrip()
+            Callsign = temp[0].lstrip().rstrip()
             Ph0.append(Callsign)
             break
 
